@@ -19,15 +19,21 @@ $book->setCategory('роман');
 echo "<pre>";
 //print_r($book);
 
-$book->addBook($book);
+$library = new Library\Library\Library();
+$library->addBook($book);
 
 $book->setName('Преступление и наказание2');
 $book->setAuthor('Ф.М.Достоевский2');
 $book->setCategory('роман2');
 
-$book->addBook($book);
-$book->addBook($book);
-print_r($book);
+$library->addBook($book);
+
+$book->setName('Преступление и наказание3');
+$book->setAuthor('Ф.М.Достоевский3');
+$book->setCategory('роман3');
+
+$library->addBook($book);
+//print_r($library);
 echo "stop";
 //$customer = new Shop\Customer\Customer();
 //$customer->setName('Ivan');

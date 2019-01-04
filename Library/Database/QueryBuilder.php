@@ -10,6 +10,6 @@ class QueryBuilder{
 
     public function select($table){
         $query = $this->db->query("SELECT * FROM $table");
-        return $query->fetchAll(PDO::FETCH_ASSOC);
+        return $query->fetchAll(FETCH_ASSOC);
     }
 }

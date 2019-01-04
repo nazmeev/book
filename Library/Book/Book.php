@@ -3,7 +3,6 @@ namespace Library\Book;
 
 class Book extends \Library\DataObject implements BookInterface {
 
-    private $books = [];
     /**
      * @param string $name
      */
@@ -58,10 +57,5 @@ class Book extends \Library\DataObject implements BookInterface {
      */
     public function getCategory(){
         return $this->getData('categoryName');
-    }
-
-    public function addBook(BookInterface $book)
-    {
-        $this->books[] = $book;
     }
 }

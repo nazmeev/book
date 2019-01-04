@@ -26,6 +26,22 @@ $customer->setData('surname', 'lastname');
 
 $cart = new Shop\Cart\Cart($customer);
 //$cart->setCustomer($customer);
+
+$t_shirt->setBrand('Armani');
+$t_shirt->setName('Sorochka');
+$t_shirt->setPrice(8999.99);
+
 $cart->addProduct($t_shirt);//агрегация
 
+$t_shirt->setBrand('Armani2');
+$t_shirt->setName('Sorochka2');
+$t_shirt->setPrice(8999.92);
+
+$cart->addProduct($t_shirt);//агрегация
+
+$t_shirt->setBrand('Armani3');
+$t_shirt->setName('Sorochka3');
+$t_shirt->setPrice(8999.93);
+
+$cart->addProduct($t_shirt);//агрегация
 print_r($cart);
