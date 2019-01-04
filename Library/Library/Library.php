@@ -6,11 +6,4 @@ class Library extends \Library\DataObject{
 
     private $books = [];
 
-    public function addBook(BookInterface $book)
-    {
-        $this->books[] = $book;
-        echo "++++";
-        print_r($this->books);
-        echo "---";
-    }
 }

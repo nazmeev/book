@@ -6,33 +6,33 @@ ini_set('include_path', __DIR__);
 
 include_once "Autoloader.php";
 
-//$db = new Library\Database\QueryBuilder(Library\Database\Connection::connect());
-//$books = $db->select("books");
-//print_r($books); die;
+$db = new Library\Database\QueryBuilder(Library\Database\Connection::connect());
+$books = $db->select("books");
 
 $book = new Library\Book\Book();
-
 $book->setName('Преступление и наказание');
 $book->setAuthor('Ф.М.Достоевский');
-$book->setCategory('роман');
+$book->setType('роман');
+$book->setCategory('художественная литература');
 
+$db->addBook($book);
 echo "<pre>";
 //print_r($book);
 
-$library = new Library\Library\Library();
-$library->addBook($book);
+//$library = new Library\Library\Library();
+//$library->addBook($book);
 
-$book->setName('Преступление и наказание2');
-$book->setAuthor('Ф.М.Достоевский2');
-$book->setCategory('роман2');
-
-$library->addBook($book);
-
-$book->setName('Преступление и наказание3');
-$book->setAuthor('Ф.М.Достоевский3');
-$book->setCategory('роман3');
-
-$library->addBook($book);
+//$book->setName('Преступление и наказание2');
+//$book->setAuthor('Ф.М.Достоевский2');
+//$book->setCategory('роман2');
+//
+//$library->addBook($book);
+//
+//$book->setName('Преступление и наказание3');
+//$book->setAuthor('Ф.М.Достоевский3');
+//$book->setCategory('роман3');
+//
+//$library->addBook($book);
 //print_r($library);
 echo "stop";
 //$customer = new Shop\Customer\Customer();
